@@ -1,2 +1,2 @@
-# LiDAR-Camer-IMU_HandleSLAM
+# LiDAR-Camera-IMU_HandleSLAM
 手持三维扫描仪项目
