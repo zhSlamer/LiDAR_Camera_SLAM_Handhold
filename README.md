@@ -6,7 +6,6 @@
 
 ![1743000024501](image/README/connect.png)
 
-
 # Markdown - Typora
 
 ✍️为工程代码写一份说明文档极其必要！
@@ -25,5 +24,6 @@
 2. https://gitee.com/gwmunan/ros2/wikis
 3. https://emoji.muan.co/
 
-[1] Zheng, Chunran, et al. "FAST-LIVO2: Fast, Direct LiDAR-Inertial-Visual Odometry."
 [2] Zheng, Chunran, et al. "FAST-LIVO: Fast and Tightly-coupled Sparse-Direct LiDAR-Inertial-Visual Odometry."
+
+[1] Zheng, Chunran, et al. "FAST-LIVO2: Fast, Direct LiDAR-Inertial-Visual Odometry."
