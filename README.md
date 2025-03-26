@@ -2,9 +2,43 @@
 
 ✍️
 
+# 项目概述
+
+    
+
+# 实物展示
+
+
+# 硬件方案
+
+## 硬件清单
+
+
+## 硬件接口说明
+
+
+## 主控 - Jetson Xavier AGX
+
+
+# 空间标定方案
+
+
+
 # 时间同步方案
 
 ![1743000024501](image/README/connect.png)
+
+# 软件方案
+
+简要介绍三个代码的功能，具体说明见各代码内部md文件
+
+FAST-LIVO2
+
+激光雷达驱动 [lidar_driver_readme.md](livox_ros_driver\lidar_driver_readme.md)
+
+相机驱动        [camera_driver_readme.md](mvs_ros_pkg\camera_driver_readme.md)
+
+STM32驱动代码
 
 # Markdown - Typora
 
