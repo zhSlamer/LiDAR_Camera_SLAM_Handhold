@@ -4,7 +4,7 @@
 
 # 项目概述
 
-    
+开发一台 基于激光雷达/相机/IMU 的手持 SLAM 设备 ，目的是满足三维空间下的地图重建、导航定位与算法开发需求
 
 # 实物展示
 
@@ -13,14 +13,31 @@
 
 ## 硬件清单
 
+表格 硬件清单
 
 ## 硬件接口说明
 
+思维导图接口说明
 
 ## 主控 - Jetson Xavier AGX
 
-
 # 空间标定方案
+
+标定参考以及流程
+
+ref:
+
+    [Fast-LIVO复现之联合标定 - Wiki - Gitee.com](https://gitee.com/gwmunan/ros2/wikis/%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/Fast-LIVO%E5%A4%8D%E7%8E%B0%E4%B9%8B%E8%81%94%E5%90%88%E6%A0%87%E5%AE%9A)
+
+## 相机内参标定
+
+[camera_calibration - ROS Wiki](http://wiki.ros.org/camera_calibration)
+
+ROS提供的一个用于单目或者双目相机标定的包，可以十分方便地使用。使用的标定板是棋盘格(Chessboard)，而非AprilTag。官网见这里。其实在官网上写了，这个包基于OpenCV实现，原理是一样的。在官网给出了利用它标定单目和双目相机的例子
+
+
+## 相机 - lidar 外参标定
+
 
 
 
