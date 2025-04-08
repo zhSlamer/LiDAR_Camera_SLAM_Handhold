@@ -22,7 +22,7 @@ TIM3 Éú³É1Hz PWMĞÅºÅ£¬Í¬Ê±ÆôÓÃÖĞ¶Ï·şÎñº¯Êı£¬ÔÚÖĞ¶ÏÄ£ÄâGPRMCÊ±¼äĞÅÏ¢£¬Í¨¹ıuart´®¿
 //ÕâÀïÊ¹ÓÃµÄÊÇ¶¨Ê±Æ÷3!
 void TIM3_Int_Init(u16 arr,u16 psc)
 {
-  TIM_TimeBaseInitTypeDef  TIM_TimeBaseStructure;
+  	TIM_TimeBaseInitTypeDef  TIM_TimeBaseStructure;
 	NVIC_InitTypeDef NVIC_InitStructure;
 
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE); //Ê±ÖÓÊ¹ÄÜ
@@ -65,13 +65,17 @@ int hh=0;
 
 unsigned char result;
 int i;
+
+// ¼ÆËãÒì»òĞ£ÑéºÍ
+// ËùÓĞ×Ö·û°´Î»Òì»ò XOR£¬½á¹ûÎª1×Ö½Ú 0xFF
+// Ğ£ÑéºÍÒÔÁ½Î»Ê®Áù½øÖÆ±íÊ¾£¬¸½¼ÓÔÚ*ºó£¬ÀıÈç*3F
 int checkNum(const char *gprmcContext)
 {
     if (gprmcContext == NULL) 
     {
         // printf("Input is NULL.\n");
         return -1;
-		}
+	}
 
     result = gprmcContext[1];
 
@@ -88,6 +92,7 @@ int checkNum(const char *gprmcContext)
     }
 
     //printf("Final result before returning: %02X\n", result);
+	//  ·µ»ØĞ£ÑéºÍ£¨0-255£©
     return result;
 }
 
@@ -137,15 +142,15 @@ void TIM3_IRQHandler(void)   //TIM3ÖĞ¶Ï
 			}
 		}
 		
+	// ¹¹½¨NEMAÓï¾ä
     sprintf(value_2, "%s%02d%02d%02d%s", gprmcStr, hh, mm, ss, ".00,A,2237.496474,N,11356.089515,E,0.0,225.5,230520,2.3,W,A*");
 	strcpy(value_1,value_2);
-	// ¼ÆËãÒì»òĞ£ÑéºÍ £º¼ÆËãNMEAĞ­Òé£¨GPSÊı¾İ£©µÄĞ£ÑéºÍ£¬Í¨¹ıÒì»òÔËËãÑéÖ¤Êı¾İÍêÕûĞÔ
+	// ¼ÆËãÒì»òĞ£ÑéºÍ £º¼ÆËãNEMAĞ­Òé£¨GPSÊı¾İ£©µÄĞ£ÑéºÍ£¬Í¨¹ıÒì»òÔËËãÑéÖ¤Êı¾İÍêÕûĞÔ
 	chckNum =checkNum(value_1); 
+	// ×ªÎªÊ®Áù½øÖÆ×Ö·û´®£¬¼ÓÈëµ½Óï¾äºóÃæ
 	sprintf(chckNumChar, "%02X", chckNum);
 	printf("%s", value_2);
     printf("%s\n", chckNumChar);
-
-	//**********************************************************************************
 
 	/**
 	chckNum=checkNum(test);	
