@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "delay.h": "c",
+        "key.h": "c",
+        "usart.h": "c",
+        "timer.h": "c",
+        "sys.h": "c",
+        "led.h": "c"
+    }
+}

@@ -119,7 +119,9 @@ void delay_init()
 #if SYSTEM_SUPPORT_OS  							//如果需要支持OS.
 	u32 reload;
 #endif
+	// 配置SysTick时钟源为HCLK的1/8（假设HCLK=72MHz时，SysTick时钟=9MHz）
 	SysTick_CLKSourceConfig(SysTick_CLKSource_HCLK_Div8);	//选择外部时钟  HCLK/8
+	// 计算1us对应的SysTick时钟周期数（9MHz下: 9 cycles/us）
 	fac_us=SystemCoreClock/8000000;				//为系统时钟的1/8  
 #if SYSTEM_SUPPORT_OS  							//如果需要支持OS.
 	reload=SystemCoreClock/8000000;				//每秒钟的计数次数 单位为K	   
