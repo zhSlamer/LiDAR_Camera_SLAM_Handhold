@@ -11,12 +11,19 @@
 * [ ] FAST-LIVO2代码
 * [ ] 实验展示
 
-
 # 项目概述
 
 开发一台 基于激光雷达/相机/IMU 的手持 SLAM 设备 ，目的是满足三维空间下的地图重建、导航定位与算法开发需求
 
 # 实物展示
+
+正视图
+
+![1745064497146](image/README/1745064497146.png)
+
+侧视图
+
+![1745064544787](image/README/1745064544787.png)
 
 # 硬件方案
 
@@ -56,11 +63,11 @@ ROS提供的一个用于单目或者双目相机标定的包，可以十分方�
 
 FAST-LIVO2
 
-激光雷达驱动 [lidar_driver_readme.md](livox_ros_driver\lidar_driver_readme.md)
+激光雷达驱动 	[lidar_driver_readme.md](livox_ros_driver\lidar_driver_readme.md)
 
-相机驱动        [camera_driver_readme.md](mvs_ros_pkg\camera_driver_readme.md)
+相机驱动        	[camera_driver_readme.md](mvs_ros_pkg\camera_driver_readme.md)
 
-STM32驱动代码
+STM32驱动代码 [stm32_timersync-open\README.md](stm32_timersync-open\README.md)
 
 # Markdown - Typora
 
